@@ -1,0 +1,40 @@
+{
+    "account": {
+        "balance": 10.0,
+        "equity": 3.82,
+        "margin_free": -4.6,
+        "profit": -6.18
+    },
+    "positions": [
+        {
+            "ticket": 2028053854,
+            "type": "BUY",
+            "volume": 0.02,
+            "open_price": 4209.696,
+            "profit": -2.92,
+            "sl": 4202.499,
+            "tp": 4220.446
+        },
+        {
+            "ticket": 2028055389,
+            "type": "BUY",
+            "volume": 0.02,
+            "open_price": 4209.865,
+            "profit": -3.26,
+            "sl": 4202.499,
+            "tp": 4220.446
+        }
+    ],
+    "market": {
+        "symbol": "XAUUSDm",
+        "price": 4208.236,
+        "trend_h1": "BULLISH",
+        "adx": "14.58",
+        "pattern": "Swing Mode"
+    },
+    "risk_profile": {
+        "mode": "SWING_M15"
+    },
+    "mode": "ACTIVE",
+    "timestamp": 1765308262.2251701
+}

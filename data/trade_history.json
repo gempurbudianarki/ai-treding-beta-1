@@ -1,0 +1,172 @@
+[
+    {
+        "ticket": 2027757585,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.07,
+        "profit": -25.59,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:19:11",
+        "timestamp": 1765304351.4242785
+    },
+    {
+        "ticket": 2027800263,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.02,
+        "profit": -2.26,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:23:16",
+        "timestamp": 1765304596.3019083
+    },
+    {
+        "ticket": 2027815666,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.02,
+        "profit": -1.16,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:24:00",
+        "timestamp": 1765304640.9538352
+    },
+    {
+        "ticket": 2027824478,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.02,
+        "profit": -1.52,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:25:06",
+        "timestamp": 1765304706.7605891
+    },
+    {
+        "ticket": 2027836847,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.01,
+        "profit": -0.17,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:28:03",
+        "timestamp": 1765304883.446741
+    },
+    {
+        "ticket": 2027841950,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.01,
+        "profit": -0.94,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:29:22",
+        "timestamp": 1765304962.9485302
+    },
+    {
+        "ticket": 2027851301,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.01,
+        "profit": 0.13,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:30:13",
+        "timestamp": 1765305013.9559946
+    },
+    {
+        "ticket": 2027857235,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "volume": 0.01,
+        "profit": -0.56,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 01:31:13",
+        "timestamp": 1765305073.4333186
+    },
+    {
+        "ticket": 2027945664,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.02,
+        "profit": 2.45,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:00:28",
+        "timestamp": 1765306828.5252166
+    },
+    {
+        "ticket": 2027955280,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.01,
+        "profit": 1.8,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:09:22",
+        "timestamp": 1765307362.467923
+    },
+    {
+        "ticket": 2027963075,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.03,
+        "profit": 3.07,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:09:23",
+        "timestamp": 1765307363.6900916
+    },
+    {
+        "ticket": 2027947413,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.02,
+        "profit": 4.86,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:09:24",
+        "timestamp": 1765307364.403865
+    },
+    {
+        "ticket": 2027986270,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.02,
+        "profit": 0.84,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:09:25",
+        "timestamp": 1765307365.1173725
+    },
+    {
+        "ticket": 2027982766,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.01,
+        "profit": 0.74,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:10:00",
+        "timestamp": 1765307400.4514406
+    },
+    {
+        "ticket": 2028023541,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.05,
+        "profit": -11.03,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:14:25",
+        "timestamp": 1765307665.6723979
+    },
+    {
+        "ticket": 2028020031,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.05,
+        "profit": -9.06,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:14:26",
+        "timestamp": 1765307666.816676
+    },
+    {
+        "ticket": 2028029732,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "volume": 0.02,
+        "profit": -4.68,
+        "reason": "Closed (MT5 Detect)",
+        "closed_at": "2025-12-10 02:15:01",
+        "timestamp": 1765307701.4849205
+    }
+]

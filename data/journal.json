@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1765304590,
+    "date": "01:23:10",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in loss (-2.63) with price moving against the sell position (4207.526 > 4206.29). Scalper edge favors immediate closure to prevent further drawdown on small volume (0.02). Risk-reward is unfavorable; no reversal signal detected.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304592,
+    "date": "01:23:12",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in loss (-1.29) with price moving against the sell position (current price 4207.526 > open 4206.962). Scalper must cut losses immediately to preserve capital and avoid widening drawdown.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304640,
+    "date": "2025-12-10 01:24",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -2.26,
+    "lesson": "Market noise.",
+    "market_context": "Trend BEARISH, Pattern None"
+  },
+  {
+    "id": 1765304641,
+    "date": "2025-12-10 01:24",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -1.16,
+    "lesson": "Market noise.",
+    "market_context": "Trend BEARISH, Pattern None"
+  },
+  {
+    "id": 1765304647,
+    "date": "01:24:07",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Entry SELL: Trade aligns with H1 bearish trend and strong bearish momentum pattern on M1, despite bullish news. RSI is neutral, and price is near resistance, supporting a sell entry. Risk is managed given small balance relative to typical position sizing.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304702,
+    "date": "01:25:02",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in negative profit (-0.41) with price moving against the sell position (current price 4206.77 > open 4206.725). Scalper edge requires immediate exit to prevent further loss on a marginal move.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304707,
+    "date": "2025-12-10 01:25",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -1.52,
+    "lesson": "Market noise.",
+    "market_context": "Trend BEARISH, Pattern None"
+  },
+  {
+    "id": 1765304789,
+    "date": "01:26:29",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "DeepSeek Vetoed: None",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304837,
+    "date": "01:27:17",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Entry SELL: Market shows BEARISH trend on H1 with ADX at 16.1 indicating weak trend strength, but momentum on M1 shows RSI at 56.9 and Bearish Engulfing pattern suggesting potential downside. Key resistance at 4221.526 provides a logical stop-loss level. News is bullish, but technical signals align with SELL direction. Balance risk is manageable at $6.26.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304841,
+    "date": "01:27:21",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in minor loss (-0.15) with price slightly below open price (4207.384 < 4207.391); scalping edge favors immediate exit to prevent slippage or widening drawdown.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304884,
+    "date": "2025-12-10 01:28",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -0.17,
+    "lesson": "Market noise.",
+    "market_context": "Trend BEARISH, Pattern Strong Bearish Close"
+  },
+  {
+    "id": 1765304889,
+    "date": "01:28:09",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Entry SELL: Trade aligns with bearish H1 trend and strong bearish M1 momentum pattern. RSI near neutral allows entry, support level provides clear stop-loss reference. News impact is outweighed by technical signals. Position size appropriate for account balance.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304959,
+    "date": "01:29:19",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in minor loss (-0.91) with price moving against the sell position (4206.899 < 4206.926). Scalper edge favors immediate closure to prevent slippage and lock in minimal loss before potential reversal.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765304963,
+    "date": "2025-12-10 01:29",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -0.94,
+    "lesson": "Market noise.",
+    "market_context": "Trend BEARISH, Pattern Strong Bearish Close"
+  },
+  {
+    "id": 1765305007,
+    "date": "01:30:07",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Entry SELL: Trade aligns with H1 bearish trend and strong bearish closing pattern on M1, despite bullish news. RSI near neutral (56.1) shows no overbought divergence. Entry near resistance (4221.526) provides favorable risk/reward. Balance ($5.15) implies micro-lot sizing, limiting absolute risk. Not reckless given confluence of technical factors.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765305010,
+    "date": "01:30:10",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in minor loss (-0.01) with price moving against sell entry (4207.811 < 4207.955); scalping edge requires immediate exit to prevent slippage or widening drawdown.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765305058,
+    "date": "2025-12-10 01:30",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 0.13,
+    "lesson": "Analysis pending.",
+    "market_context": "Trend BEARISH, Pattern None"
+  },
+  {
+    "id": 1765305066,
+    "date": "01:31:06",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Entry SELL: Bearish trend alignment with H1 bearish signal and strong bearish close pattern supports sell direction. News bullish conflict noted but momentum and technicals dominate current signal. Risk manageable with $5.28 balance.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765305069,
+    "date": "01:31:09",
+    "symbol": "XAUUSDm",
+    "result": "ALERT",
+    "pnl": 0,
+    "lesson": "Forced Exit: Position is in minor loss (-0.29) with price moving against the sell position (4207.645 > 4207.515). As a scalper, minimize drawdown and exit immediately to prevent slippage or widening spread.",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765305121,
+    "date": "2025-12-10 01:32",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -0.56,
+    "lesson": "Market noise.",
+    "market_context": "Trend BEARISH, Pattern Hammer"
+  },
+  {
+    "id": 1765306443,
+    "date": "01:54:03",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765306471,
+    "date": "01:54:31",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765306565,
+    "date": "01:56:05",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765306626,
+    "date": "01:57:06",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765306861,
+    "date": "2025-12-10 02:01",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 2.45,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765306924,
+    "date": "02:02:04",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765306989,
+    "date": "02:03:09",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765307363,
+    "date": "2025-12-10 02:09",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 1.8,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307364,
+    "date": "2025-12-10 02:09",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 3.07,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307365,
+    "date": "2025-12-10 02:09",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 4.86,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307400,
+    "date": "2025-12-10 02:10",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 0.84,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307401,
+    "date": "2025-12-10 02:10",
+    "symbol": "XAUUSDm",
+    "result": "WIN",
+    "pnl": 0.74,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307405,
+    "date": "02:10:05",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765307467,
+    "date": "02:11:07",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765307528,
+    "date": "02:12:08",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765307588,
+    "date": "02:13:08",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765307666,
+    "date": "2025-12-10 02:14",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -11.03,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307701,
+    "date": "2025-12-10 02:15",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -9.06,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307702,
+    "date": "2025-12-10 02:15",
+    "symbol": "XAUUSDm",
+    "result": "LOSS",
+    "pnl": -4.68,
+    "lesson": "Market noise.",
+    "market_context": "Trend BULLISH, Pattern Swing Mode"
+  },
+  {
+    "id": 1765307987,
+    "date": "02:19:47",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765308015,
+    "date": "02:20:15",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  },
+  {
+    "id": 1765308122,
+    "date": "02:22:02",
+    "symbol": "XAUUSDm",
+    "result": "INFO",
+    "pnl": 0,
+    "lesson": "Trade BUY",
+    "market_context": "Real-time Monitoring"
+  }
+]

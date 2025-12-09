@@ -1,0 +1,23 @@
+flask==3.0.3
+pydantic==2.7.1
+pydantic-settings==2.2.1
+python-dotenv==1.0.1
+requests==2.31.0
+protobuf==5.26.1
+
+MetaTrader5==5.0.45
+
+pandas==2.2.2
+numpy==1.26.4
+ta==0.11.0
+
+loguru==0.7.2
+
+aiohttp==3.9.5
+websockets==12.0
+
+matplotlib==3.8.3
+
+# Optional if using LLM
+google-generativeai==0.5.0
+openai==1.25.0

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dark.css') }}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>AI Trading Bot</h2>
+    <a href="/">📊 Overview</a>
+    <a href="/signals">📈 Signals History</a>
+    <a href="/trades">🧾 Trades</a>
+    <a href="/settings">⚙ Settings / Mode</a>
+</div>
+
+<div class="main">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

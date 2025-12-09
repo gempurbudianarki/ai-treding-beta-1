@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" x-data="appData()" x-init="initApp()" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON QUANT PRO V16</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        :root { --bg: #050505; --card: #0a0a0a; --border: #222; --accent: #00f0ff; }
+        body { background: var(--bg); color: #e0e0e0; font-family: 'Consolas', 'Monaco', monospace; overflow: hidden; }
+        
+        /* Glass Effect */
+        .glass { background: rgba(15, 15, 20, 0.95); border: 1px solid var(--border); backdrop-filter: blur(10px); }
+        .neon-border { border: 1px solid rgba(0, 240, 255, 0.3); box-shadow: 0 0 15px rgba(0, 240, 255, 0.1); }
+        .neon-text { text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
+        
+        /* Tabs */
+        .tab-btn { cursor: pointer; padding: 8px 16px; font-weight: bold; border-bottom: 2px solid transparent; transition: 0.3s; opacity: 0.6; }
+        .tab-btn:hover { opacity: 1; color: var(--accent); }
+        .tab-btn.active { opacity: 1; color: var(--accent); border-bottom: 2px solid var(--accent); background: rgba(0, 240, 255, 0.05); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+        /* Animations */
+        @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); } }
+        .panic-btn { animation: pulse-red 2s infinite; }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+
+    <header class="h-14 border-b border-gray-800 bg-[#080808] flex items-center justify-between px-6 shrink-0">
+        <div class="flex items-center gap-4">
+            <i class="fa-solid fa-robot text-cyan-400 text-2xl"></i>
+            <div>
+                <h1 class="font-bold text-xl tracking-widest text-white neon-text">NEON<span class="text-cyan-400">QUANT</span></h1>
+                <div class="text-[10px] text-gray-500 tracking-wide">AI ALGORITHMIC TRADING SYSTEM</div>
+            </div>
+        </div>
+
+        <nav class="flex bg-gray-900 rounded p-1 gap-1">
+            <button @click="tab='monitor'" :class="tab=='monitor'?'active':''" class="tab-btn text-xs"><i class="fa-solid fa-chart-line mr-2"></i>LIVE MONITOR</button>
+            <button @click="tab='brain'" :class="tab=='brain'?'active':''" class="tab-btn text-xs"><i class="fa-solid fa-brain mr-2"></i>AI MEMORY</button>
+            <button @click="tab='history'" :class="tab=='history'?'active':''" class="tab-btn text-xs"><i class="fa-solid fa-clock-rotate-left mr-2"></i>HISTORY</button>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <div class="text-right">
+                <div class="text-[10px] text-gray-500">SERVER STATUS</div>
+                <div class="font-bold text-xs" :class="online ? 'text-green-400' : 'text-red-500'" x-text="online ? 'ONLINE ●' : 'OFFLINE ○'"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 p-4 overflow-hidden relative">
+        
+        <div x-show="tab === 'monitor'" class="grid grid-cols-12 gap-4 h-full" style="display: none;">
+            
+            <div class="col-span-3 flex flex-col gap-4">
+                <div class="glass p-4 rounded-xl border-l-4 border-cyan-500">
+                    <h3 class="text-xs text-gray-400 font-bold mb-3 uppercase flex justify-between">
+                        <span><i class="fa-solid fa-wallet mr-2"></i>LIVE WALLET</span>
+                        <span class="text-cyan-500" x-text="'Risk: ' + (risk_mode || 'STD')"></span>
+                    </h3>
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="bg-black/50 p-3 rounded border border-gray-800">
+                            <div class="text-[10px] text-gray-500">TOTAL EQUITY</div>
+                            <div class="text-2xl font-mono font-bold text-white" x-text="fmt(equity)">$0.00</div>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="flex-1 bg-black/50 p-2 rounded border border-gray-800">
+                                <div class="text-[10px] text-gray-500">BALANCE</div>
+                                <div class="font-mono text-gray-300" x-text="fmt(balance)"></div>
+                            </div>
+                            <div class="flex-1 bg-black/50 p-2 rounded border border-gray-800">
+                                <div class="text-[10px] text-gray-500">PNL</div>
+                                <div class="font-mono font-bold" :class="pnl>=0?'text-green-400':'text-red-400'" x-text="(pnl>=0?'+':'')+fmt(pnl)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-4 rounded-xl flex-1 flex flex-col overflow-hidden">
+                    <h3 class="text-xs text-gray-400 font-bold mb-3 uppercase flex justify-between">
+                        <span><i class="fa-solid fa-list-ul mr-2"></i>OPEN POSITIONS</span>
+                        <span class="bg-gray-800 px-2 rounded text-white" x-text="positions.length">0</span>
+                    </h3>
+                    <div class="overflow-auto flex-1">
+                        <table class="w-full text-xs text-left border-collapse">
+                            <thead class="text-gray-500 border-b border-gray-800 sticky top-0 bg-[#0f0f0f]">
+                                <tr><th class="py-2">TICKET</th><th>TYPE</th><th>VOL</th><th class="text-right">PROFIT</th></tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-800">
+                                <template x-for="p in positions" :key="p.ticket">
+                                    <tr class="hover:bg-gray-800/50 transition">
+                                        <td class="py-2 text-gray-400" x-text="p.ticket"></td>
+                                        <td class="py-2 font-bold" :class="p.type=='BUY'?'text-blue-400':'text-red-400'" x-text="p.type"></td>
+                                        <td class="py-2 text-gray-300" x-text="p.volume"></td>
+                                        <td class="py-2 font-bold text-right" :class="p.profit>=0?'text-green-400':'text-red-400'" x-text="fmt(p.profit)"></td>
+                                    </tr>
+                                </template>
+                                <tr x-show="positions.length===0">
+                                    <td colspan="4" class="py-10 text-center text-gray-600 italic">No active trades.<br>AI is scanning...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="glass p-4 rounded-xl">
+                    <h3 class="text-xs text-gray-400 font-bold mb-3 uppercase"><i class="fa-solid fa-gamepad mr-2"></i>COMMAND CENTER</h3>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button @click="cmd('START')" class="py-2 bg-green-900/30 border border-green-500/30 text-green-400 text-xs font-bold hover:bg-green-500/20 rounded transition">
+                            <i class="fa-solid fa-play mr-1"></i> START
+                        </button>
+                        <button @click="cmd('STOP')" class="py-2 bg-yellow-900/30 border border-yellow-500/30 text-yellow-400 text-xs font-bold hover:bg-yellow-500/20 rounded transition">
+                            <i class="fa-solid fa-pause mr-1"></i> PAUSE
+                        </button>
+                    </div>
+                    <button @click="cmd('CLOSE_ALL')" class="mt-2 w-full py-3 bg-red-900/50 border border-red-500 text-red-500 text-xs font-bold hover:bg-red-900/80 rounded transition panic-btn">
+                        <i class="fa-solid fa-skull mr-2"></i> EMERGENCY CLOSE ALL
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-span-6 glass rounded-xl overflow-hidden relative border border-gray-800">
+                <div class="absolute top-2 left-2 z-10 bg-black/50 px-2 py-1 rounded text-[10px] text-gray-400 border border-gray-700">
+                    LIVE MARKET DATA
+                </div>
+                <div class="tradingview-widget-container" style="height:100%;width:100%">
+                    <div id="tv_chart" style="height:100%;width:100%"></div>
+                </div>
+            </div>
+
+            <div class="col-span-3 glass rounded-xl flex flex-col overflow-hidden border-r-4 border-cyan-500">
+                <div class="p-3 bg-gray-900/80 border-b border-gray-800 flex justify-between items-center">
+                    <h3 class="text-xs font-bold text-cyan-400"><i class="fa-solid fa-robot mr-2"></i>AI COUNCIL STREAM</h3>
+                    <div class="flex gap-1">
+                        <span class="w-2 h-2 rounded-full bg-blue-500"></span><span class="text-[9px] text-gray-500 mr-2">Qwen</span>
+                        <span class="w-2 h-2 rounded-full bg-orange-500"></span><span class="text-[9px] text-gray-500">DeepSeek</span>
+                    </div>
+                </div>
+                <div id="chat-box" class="flex-1 overflow-y-auto p-3 space-y-3 bg-[#080808]">
+                    <template x-for="msg in chats">
+                        <div class="p-2 rounded-lg text-[10px] border-l-2 relative group hover:bg-gray-900/50 transition"
+                             :class="{
+                                 'border-blue-500 bg-blue-900/5': msg.speaker.includes('Qwen'),
+                                 'border-orange-500 bg-orange-900/5': msg.speaker.includes('DeepSeek'),
+                                 'border-green-500 bg-green-900/5': msg.speaker.includes('SYSTEM')
+                             }">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold uppercase tracking-wider opacity-80" 
+                                      :class="msg.speaker.includes('Qwen')?'text-blue-400':msg.speaker.includes('DeepSeek')?'text-orange-400':'text-green-400'" 
+                                      x-text="msg.speaker"></span>
+                                <span class="text-[9px] text-gray-600" x-text="msg.time"></span>
+                            </div>
+                            <div class="text-gray-300 leading-relaxed" x-text="msg.message"></div>
+                            <div x-show="msg.action && msg.action!='HOLD'" class="mt-2 text-right">
+                                <span class="px-2 py-0.5 rounded text-[9px] font-bold" 
+                                      :class="msg.action=='BUY'?'bg-green-900 text-green-400':msg.action=='SELL'?'bg-red-900 text-red-400':'bg-gray-800 text-gray-400'"
+                                      x-text="msg.action"></span>
+                            </div>
+                        </div>
+                    </template>
+                    <div x-show="chats.length===0" class="text-center py-10 opacity-30">
+                        <i class="fa-solid fa-spinner fa-spin text-2xl mb-2"></i><br>Connecting to AI Brain...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="tab === 'brain'" class="h-full glass rounded-xl p-6 overflow-auto" style="display: none;">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-1"><i class="fa-solid fa-brain text-purple-400 mr-2"></i>NEURAL MEMORY</h2>
+                    <p class="text-gray-500 text-xs">Evaluations and lessons learned from past trades (Powered by Gemini)</p>
+                </div>
+                <button @click="fetchJournal()" class="px-3 py-1 bg-gray-800 rounded hover:bg-gray-700 text-xs"><i class="fa-solid fa-sync mr-1"></i> Refresh</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <template x-for="mem in journal">
+                    <div class="bg-black/40 border border-gray-800 p-4 rounded-xl hover:border-purple-500/50 transition duration-300">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-[10px] text-gray-500 font-mono" x-text="mem.date"></span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider" 
+                                  :class="mem.result=='WIN'?'bg-green-900/30 text-green-400 border border-green-900':'bg-red-900/30 text-red-400 border border-red-900'" 
+                                  x-text="mem.result"></span>
+                        </div>
+                        <div class="mb-3">
+                            <div class="text-[10px] text-gray-500 uppercase mb-1">Lesson Learned</div>
+                            <div class="text-sm text-gray-200 italic font-medium">"<span x-text="mem.lesson"></span>"</div>
+                        </div>
+                        <div class="flex justify-between items-end border-t border-gray-800/50 pt-3 mt-2">
+                            <div class="text-[10px] text-gray-600">PnL</div>
+                            <div class="font-mono font-bold" :class="mem.pnl>=0?'text-green-400':'text-red-400'" x-text="fmt(mem.pnl)"></div>
+                        </div>
+                    </div>
+                </template>
+                
+                <div x-show="journal.length===0" class="col-span-full flex flex-col items-center justify-center py-20 text-gray-600">
+                    <i class="fa-solid fa-folder-open text-4xl mb-4 opacity-50"></i>
+                    <p>No lessons recorded yet.</p>
+                    <p class="text-xs mt-1">Wait for the bot to close a trade to see analysis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="tab === 'history'" class="h-full glass rounded-xl p-6 overflow-auto" style="display: none;">
+            <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-clock-rotate-left text-blue-400"></i> TRANSACTION HISTORY
+            </h2>
+            <div class="bg-black/30 rounded-xl overflow-hidden border border-gray-800">
+                <table class="w-full text-xs text-left">
+                    <thead class="bg-gray-900 text-gray-400 font-bold">
+                        <tr>
+                            <th class="p-4">TIME</th>
+                            <th class="p-4">SYMBOL</th>
+                            <th class="p-4">TYPE</th>
+                            <th class="p-4">VOLUME</th>
+                            <th class="p-4 text-right">PROFIT</th>
+                            <th class="p-4">REASON</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-800">
+                        <template x-for="h in history">
+                            <tr class="hover:bg-gray-800/50 transition">
+                                <td class="p-4 text-gray-500 font-mono" x-text="h.closed_at"></td>
+                                <td class="p-4 font-bold text-white" x-text="h.symbol"></td>
+                                <td class="p-4 font-bold" :class="h.type=='BUY'?'text-blue-400':'text-red-400'" x-text="h.type"></td>
+                                <td class="p-4 text-gray-300" x-text="h.volume"></td>
+                                <td class="p-4 text-right font-mono font-bold text-sm" :class="h.profit>=0?'text-green-400':'text-red-400'" x-text="fmt(h.profit)"></td>
+                                <td class="p-4 text-gray-500 italic max-w-xs truncate" x-text="h.reason"></td>
+                            </tr>
+                        </template>
+                        <tr x-show="history.length===0">
+                            <td colspan="6" class="p-10 text-center text-gray-600">No trade history available.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    
+    <script>
+        function appData() {
+            return {
+                tab: 'monitor',
+                online: false,
+                balance: 0, equity: 0, pnl: 0, risk_mode: '',
+                positions: [], chats: [], journal: [], history: [],
+
+                initApp() {
+                    // Init TradingView (XAUUSD Default)
+                    new TradingView.widget({
+                        "autosize": true,
+                        "symbol": "OANDA:XAUUSD",
+                        "interval": "15",
+                        "timezone": "Asia/Jakarta",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_side_toolbar": false,
+                        "allow_symbol_change": true,
+                        "container_id": "tv_chart"
+                    });
+                    
+                    // Auto-refresh loops
+                    setInterval(() => this.fetchStatus(), 1000); // Cepat (Status)
+                    setInterval(() => this.fetchChat(), 2000);   // Sedang (Chat)
+                    setInterval(() => { this.fetchJournal(); this.fetchHistory(); }, 5000); // Lambat (Data Berat)
+                },
+
+                async fetchStatus() {
+                    try {
+                        const res = await fetch('/api/status');
+                        const data = await res.json();
+                        this.online = true;
+                        
+                        if(data.account) {
+                            this.balance = data.account.balance;
+                            this.equity = data.account.equity;
+                            this.pnl = this.equity - this.balance;
+                        }
+                        if(data.positions) this.positions = data.positions;
+                        if(data.risk_profile) this.risk_mode = data.risk_profile.mode;
+                    } catch { this.online = false; }
+                },
+
+                async fetchChat() {
+                    try {
+                        const res = await fetch('/api/chat');
+                        const data = await res.json();
+                        this.chats = data.reverse();
+                    } catch {}
+                },
+
+                async fetchJournal() {
+                    try {
+                        const res = await fetch('/api/journal');
+                        this.journal = (await res.json()).reverse();
+                    } catch {}
+                },
+
+                async fetchHistory() {
+                    try {
+                        const res = await fetch('/api/history');
+                        this.history = (await res.json()).reverse();
+                    } catch {}
+                },
+
+                async cmd(c) {
+                    if(!confirm('Execute ' + c + '?')) return;
+                    try {
+                        await fetch('/api/control', {
+                            method: 'POST', 
+                            headers: {'Content-Type':'application/json'}, 
+                            body: JSON.stringify({command:c})
+                        });
+                        alert('✅ Command Sent');
+                    } catch { alert('❌ Error'); }
+                },
+
+                fmt(n) { return new Intl.NumberFormat('en-US', {style:'currency', currency:'USD'}).format(n); }
+            }
+        }
+    </script>
+</body>
+</html>
