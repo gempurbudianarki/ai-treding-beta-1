@@ -1,0 +1,22 @@
+{
+  "account": {
+    "balance": 40.39,
+    "equity": 40.39,
+    "margin_free": 40.39,
+    "profit": 0.0
+  },
+  "positions": [],
+  "market": {
+    "symbol": "XAUUSDm",
+    "price": 4532.205,
+    "trend_h1": "BULLISH",
+    "momentum": "BULLISH_ACCEL",
+    "adx": "9.78",
+    "pattern": "SNIPER_BUY"
+  },
+  "risk_profile": {
+    "mode": "SNIPER"
+  },
+  "mode": "ACTIVE",
+  "timestamp": 1766784761.2235126
+}

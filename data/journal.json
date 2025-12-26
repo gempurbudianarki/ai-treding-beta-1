@@ -1,0 +1,11 @@
+[
+  {
+    "date": "2025-12-27 04:09",
+    "ticket": 2147551450,
+    "type": "BUY",
+    "result": "LOSS",
+    "pnl": -1.62,
+    "lesson": "Stop Loss hit by volatility.",
+    "market_context": "Trend BULLISH, Pattern None"
+  }
+]

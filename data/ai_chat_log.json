@@ -1,0 +1,302 @@
+[
+  {
+    "time": "03:53:31",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 50-pip SL, 1:1.5 RR target achieved with 15-point upside.",
+    "action": "BUY"
+  },
+  {
+    "time": "03:53:33",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend; SL of 5.0 pips is tight and logical; RSI at 51.24 is neutral, not extreme, supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "03:53:33",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "03:53:52",
+    "speaker": "Manager (Exit)",
+    "message": "Market momentum is bearish and accelerating, which strongly opposes the current BUY position. The negative PnL of $-0.18 indicates immediate risk, and holding would likely exacerbate losses under these conditions.",
+    "action": "CLOSE"
+  },
+  {
+    "time": "03:55:53",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 10-point SL (100 pips) ensures 1:1.5 RR with quick profit target.",
+    "action": "BUY"
+  },
+  {
+    "time": "03:55:56",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend and bullish news sentiment. SL is logical at 5 pips, providing reasonable risk management. RSI M15 at 51.96 is neutral, not extreme, supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "03:55:56",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "03:56:18",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 23-point SL (50 pips) with 1:1.5 RR target. Neutral M15 momentum irrelevant \u2014 trend dominates.",
+    "action": "BUY"
+  },
+  {
+    "time": "03:56:22",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend, SL is tight at 3 pips providing favorable risk/reward, and RSI at 53.5 is neutral\u2014not extreme\u2014supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "03:56:22",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "03:57:08",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 30-point SL, 1:1.5 RR target achieved with 14.4 pip upside.",
+    "action": "BUY"
+  },
+  {
+    "time": "03:57:11",
+    "speaker": "Risk Governor",
+    "message": "RSI M15 at 53.607 is neutral, but SL is too tight at only 3 pips below entry, offering insufficient risk buffer against normal market noise.",
+    "action": "REJECT"
+  },
+  {
+    "time": "03:57:11",
+    "speaker": "SYSTEM",
+    "message": "\ud83d\udee1\ufe0f VETO BY RISK MANAGER",
+    "action": "HOLD"
+  },
+  {
+    "time": "03:58:09",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend and bullish news sentiment; tight 30-point SL ensures 1:1.5 RR with quick profit capture.",
+    "action": "BUY"
+  },
+  {
+    "time": "03:58:11",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend. SL of 3 pips is tight and logical for scalping. RSI at 53.8 is neutral, not extreme, supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "03:58:11",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "03:59:09",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend and bullish news sentiment; tight 40-pip SL ensures 1:1.5 RR with quick profit capture.",
+    "action": "BUY"
+  },
+  {
+    "time": "03:59:12",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend, SL is tight at 4 points risk, and RSI at 54.64 is neutral - not extreme. Favorable news sentiment supports bullish bias.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "03:59:12",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "04:00:09",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend and bullish news sentiment; tight 30-point SL ensures 1:1.5 RR with quick profit capture.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:00:12",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with bullish H1 trend. SL is logical at 3 pips (tight risk). RSI at 54.7 is neutral, not extreme, allowing entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "04:00:12",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "04:01:20",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed in strong bullish H1 trend with accelerating M15 momentum; tight 30-point SL protects capital while targeting 1:1.5 RR.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:01:24",
+    "speaker": "Risk Governor",
+    "message": "RSI M15 at 55.164 is not extreme, but SL is too tight at only 3.0 pips, offering poor risk-reward ratio and high vulnerability to market noise.",
+    "action": "REJECT"
+  },
+  {
+    "time": "04:01:24",
+    "speaker": "SYSTEM",
+    "message": "\ud83d\udee1\ufe0f VETO BY RISK MANAGER",
+    "action": "HOLD"
+  },
+  {
+    "time": "04:03:04",
+    "speaker": "Manager (Exit)",
+    "message": "BEARISH_ACCEL momentum strongly reverses against the BUY position, indicating accelerating downward pressure likely to increase losses.",
+    "action": "CLOSE"
+  },
+  {
+    "time": "04:03:39",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed in strong H1 bullish trend; tight 30-point SL, 1:1.5 RR target achieved with 14.5-point profit zone.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:03:42",
+    "speaker": "Risk Governor",
+    "message": "RSI M15 at 52.3 is neutral, not extreme, but SL is set too tight at 4525.35 (only ~4 points below entry) in a volatile market context, increasing risk of premature stop-out without sufficient technical justification.",
+    "action": "REJECT"
+  },
+  {
+    "time": "04:03:42",
+    "speaker": "SYSTEM",
+    "message": "\ud83d\udee1\ufe0f VETO BY RISK MANAGER",
+    "action": "HOLD"
+  },
+  {
+    "time": "04:04:08",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend and bullish news sentiment; tight 50-pip SL, 1:1.5 RR target hit.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:04:10",
+    "speaker": "Risk Governor",
+    "message": "RSI M15 at 52.28 is neutral, but SL is too tight at only 5 pips, offering poor risk-reward ratio and high vulnerability to market noise.",
+    "action": "REJECT"
+  },
+  {
+    "time": "04:04:10",
+    "speaker": "SYSTEM",
+    "message": "\ud83d\udee1\ufe0f VETO BY RISK MANAGER",
+    "action": "HOLD"
+  },
+  {
+    "time": "04:04:29",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend and bullish news sentiment; tight 50-pip SL, 1:1.5 RR target achieved.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:04:32",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend. SL is logical at 5 pips, providing a tight risk control. RSI M15 at 52.69 is neutral, not extreme, avoiding overbought conditions.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "04:04:32",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "04:05:04",
+    "speaker": "Manager (Exit)",
+    "message": "Current market momentum is bearish and accelerating, which strongly opposes the BUY position. This increases risk of further losses, making immediate closure prudent to prevent additional negative PnL.",
+    "action": "CLOSE"
+  },
+  {
+    "time": "04:06:10",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 30-point SL, 1:1.5 RR target achieved with 14.6-point upside.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:06:12",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend. SL is logical at 3 pips, providing tight risk control. RSI at 52.17 is neutral, not extreme, supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "04:06:12",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "04:06:32",
+    "speaker": "Manager (Exit)",
+    "message": "Market momentum is bearish and accelerating, strongly opposing the current BUY position. The negative PnL indicates immediate risk, and holding would likely amplify losses under accelerating bearish conditions.",
+    "action": "CLOSE"
+  },
+  {
+    "time": "04:07:45",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 50-pip SL, 1:1.5 RR target hit with 14.6-point upside.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:07:47",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend. SL is logical at 5 pips, providing a reasonable risk buffer. RSI at 52.16 is neutral, not extreme, supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "04:07:47",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "04:08:10",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 30-point SL, 15-point RR target achieved with neutral M15 momentum and bullish sentiment supporting upside.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:08:12",
+    "speaker": "Risk Governor",
+    "message": "RSI M15 at 52.85 is neutral, but SL of 3.0 points is too wide relative to TP of 15.0 points, creating unfavorable risk-reward ratio (1:5) despite alignment with H1 bullish trend and bullish news sentiment.",
+    "action": "REJECT"
+  },
+  {
+    "time": "04:08:12",
+    "speaker": "SYSTEM",
+    "message": "\ud83d\udee1\ufe0f VETO BY RISK MANAGER",
+    "action": "HOLD"
+  },
+  {
+    "time": "04:09:06",
+    "speaker": "Strategist (Qwen)",
+    "message": "SNIPER_BUY confirmed by bullish H1 trend; tight 30-point SL, 1:1.5 RR target achieved with 15-point upside.",
+    "action": "BUY"
+  },
+  {
+    "time": "04:09:08",
+    "speaker": "Risk Governor",
+    "message": "Trade aligns with H1 bullish trend, SL is tight at 3 pips risk, and RSI at 52.6 is neutral (not extreme), supporting entry.",
+    "action": "APPROVE"
+  },
+  {
+    "time": "04:09:08",
+    "speaker": "SYSTEM",
+    "message": "\u2705 TRADE APPROVED",
+    "action": "EXECUTE"
+  },
+  {
+    "time": "04:09:29",
+    "speaker": "Manager (Exit)",
+    "message": "Current market momentum is bearish and accelerating, which strongly opposes the BUY position. With a negative PnL of $-1.69, holding risks further losses as the trend is adverse. Closing now mitigates additional downside.",
+    "action": "CLOSE"
+  }
+]

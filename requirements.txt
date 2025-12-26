@@ -1,0 +1,30 @@
+# --- CORE FRAMEWORK & UTILITIES ---
+flask                   # Untuk Web Dashboard
+pydantic                # Validasi Data yang ketat
+pydantic-settings       # Pengaturan Environment
+python-dotenv           # Load file .env
+loguru                  # Logging yang cantik dan detail
+pytz                    # WAJIB: Untuk Timezone Asia/Jakarta (Time Filter)
+
+# --- DATA SCIENCE & TECHNICAL ANALYSIS ---
+# Ini nyawa dari TechnicalBrain.py
+numpy                   # Komputasi numerik
+pandas                  # Manipulasi Dataframe
+pandas_ta               # Indikator Teknikal (EMA, RSI, MACD, ADX)
+
+# --- TRADING & BROKER CONNECTIVITY ---
+MetaTrader5             # Koneksi ke Terminal MT5
+matplotlib              # Visualisasi data (Backend plotting jika perlu)
+
+# --- NETWORKING & NEWS ---
+requests                # HTTP Client (Sync)
+aiohttp                 # HTTP Client (Async)
+websockets              # Komunikasi Real-time
+feedparser              # Untuk baca berita Forex (NewsFeeder)
+
+# --- ARTIFICIAL INTELLIGENCE (LLM) ---
+google-generativeai     # Google Gemini API (Otak Utama)
+openai                  # OpenAI API (Cadangan/Optional)
+
+# --- SERVER (OPTIONAL TAPI RECOMENDED BUAT DEPLOY) ---
+gunicorn                # Production Server untuk Flask (jika deploy di Linux)
